@@ -4,13 +4,19 @@ var favicon = require('serve-favicon')
 var logger = require('morgan')
 var bodyParser = require('body-parser')
 var methodOverride = require('method-override')
+var engine = require('ejs-locals')
 var index = require('./routes/index')
 
 var app = express()
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
+app.engine('ejs', engine)
 app.set('view engine', 'ejs')
+// app.set('view options', {layout: '../layout.ejs'})
+
+
+
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
