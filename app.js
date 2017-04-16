@@ -6,6 +6,7 @@ var bodyParser = require('body-parser')
 var methodOverride = require('method-override')
 var engine = require('ejs-locals')
 var index = require('./routes/index')
+var venues = require('./routes/venues')
 
 var app = express()
 
@@ -27,6 +28,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(methodOverride('_method'))
 
 app.use('/', index)
+app.use('/venues', venues)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
