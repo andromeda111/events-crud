@@ -18,6 +18,16 @@ exports.seed = function(knex) {
           id: 3,
           tickets_id: 3,
           attendees_id: 3
+        },
+        {
+          id: 4,
+          tickets_id: 4,
+          attendees_id: 1
+        },
+        {
+          id: 5,
+          tickets_id: 5,
+          attendees_id: 1
         }
       ])
     })

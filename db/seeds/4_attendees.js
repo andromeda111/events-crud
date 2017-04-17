@@ -10,7 +10,6 @@ exports.seed = function(knex) {
           last_name: 'last name',
           birthday: '2/23/1989',
           email: 'test@test.com',
-          tickets_id: 1
         },
         {
           id: 2,
@@ -18,7 +17,6 @@ exports.seed = function(knex) {
           last_name: 'last name',
           birthday: '2/23/1989',
           email: 'test@test.com',
-          tickets_id: 2
         },
         {
           id: 3,
@@ -26,7 +24,13 @@ exports.seed = function(knex) {
           last_name: 'last name',
           birthday: '2/23/1989',
           email: 'test@test.com',
-          tickets_id: 3
+        },
+        {
+          id: 4,
+          preferred_name: 'name 4',
+          last_name: 'last name',
+          birthday: '2/23/1989',
+          email: 'test@test.com',
         }
       ])
     })

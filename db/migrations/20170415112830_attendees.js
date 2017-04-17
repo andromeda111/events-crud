@@ -6,7 +6,7 @@ exports.up = function(knex) {
     table.string('last_name')
     table.date('birthday')
     table.string('email')
-    table.integer('tickets_id').references('tickets.id')
+    table.timestamps(true, true)
   })
 }
 

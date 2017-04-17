@@ -6,7 +6,7 @@ exports.seed = function(knex) {
       return knex('tickets').insert([
         {
           id: 1,
-          name: 'Ticket 1',
+          name: 'Ticket 1 for event 1',
           price: 150,
           events_id: 1,
         },
@@ -21,6 +21,18 @@ exports.seed = function(knex) {
           name: 'Ticket 3',
           price: 350,
           events_id: 3,
+        },
+        {
+          id: 4,
+          name: 'Ticket 4 for event 3',
+          price: 450,
+          events_id: 3,
+        },
+        {
+          id: 5,
+          name: 'Ticket 5 for event 1',
+          price: 550,
+          events_id: 1,
         }
       ])
     })
