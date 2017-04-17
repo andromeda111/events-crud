@@ -1,6 +1,9 @@
 <% layout('../layout') -%>
 
 <h1><%= attendee.preferred_name %> <%= attendee.last_name %></h1>
+<p>Date of Birth: <%= attendee.birthday %> | Email: <%= attendee.email %></p>
+<hr>
+
 <div class="container">
   <% collection.forEach(function(element) { %>
     <%if (element.id === attendee.id) { %>

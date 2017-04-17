@@ -1,6 +1,9 @@
 <% layout('../layout') -%>
 
 <h1><%= venue.name %></h1>
+<p>Capacity: <%= venue.capacity %> | <%= venue.line_1 %> <%= venue.line_2 %> | <%= venue.city %>, <%= venue.state %> <%= venue.zip %></p>
+<hr>
+
 <div class="container">
   <% collection.forEach(function(element) { %>
     <%if (element.name === venue.name) { %>
