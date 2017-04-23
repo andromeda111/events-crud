@@ -12,5 +12,9 @@ a {
 }
 
 .list-bottom {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+img {
+  width: 80px;
 }

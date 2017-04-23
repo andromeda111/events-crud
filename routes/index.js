@@ -4,8 +4,9 @@ var db = require('../db')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  db('events').select('events.title', 'events.start_datetime', 'venues.name', 'venues.capacity', 'tickets.events_id').innerJoin('venues', 'events.venues_id', 'venues.id').innerJoin('tickets', 'tickets.events_id', 'events.id').then(result => {
-    // console.log(collection);
+  db('events').select('events.title', 'events.start_datetime', 'venues.name', 'events.img_url', 'venues.capacity', 'tickets.events_id').innerJoin('venues', 'events.venues_id', 'venues.id').innerJoin('tickets', 'tickets.events_id', 'events.id').then(result => {
+
+    // Single out unique events to display
     var collection = []
     result.forEach(function(e) {
       if(!this[e.events_id]) {

@@ -7,6 +7,7 @@ exports.up = function(knex) {
     table.boolean('over_21')
     table.date('start_datetime')
     table.date('end_datetime')
+    table.string('img_url')
     table.integer('venues_id').references('venues.id')
     table.timestamps(true, true)
   })

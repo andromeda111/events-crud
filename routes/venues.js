@@ -8,7 +8,7 @@ router.get('/:id', function(req, res, next) {
 
   db('venues').where({id}).then(venues => {
     var venue = venues[0]
-    db('venues').select('venues.name', 'events.id', 'events.title', 'events.description', 'over_21', 'events.start_datetime', 'events.end_datetime').innerJoin('events', 'events.venues_id', 'venues.id').orderBy('events.start_datetime', 'ASC').then(collection => {
+    db('venues').select('venues.name', 'events.id', 'events.title', 'events.description', 'over_21', 'events.start_datetime', 'events.end_datetime', 'img_url').innerJoin('events', 'events.venues_id', 'venues.id').orderBy('events.start_datetime', 'ASC').then(collection => {
 
       res.render('pages/venues', { venue, collection });
     })

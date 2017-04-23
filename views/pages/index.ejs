@@ -14,9 +14,15 @@
 
     </div>
     <div class="list-group-item list-group-item-action">
-      <p>Venue: <%= element.name %></p>
-      <p>Attendees: ?/<%= element.capacity %></p>
-      <p>Event Starts: <%= element.start_datetime %></p>
+      <div class="col-xs-4">
+        <img src="<%= element.img_url %>" alt="">
+      </div>
+      <div class="col-xs-8">
+        <p>Venue: <%= element.name %></p>
+        <p>Attendees: ?/<%= element.capacity %></p>
+        <p>Event Starts: <%= element.start_datetime %></p>
+
+      </div>
 
     </div>
   </div>

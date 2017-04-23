@@ -15,10 +15,17 @@
 
     </div>
     <div class="list-group-item list-group-item-action">
-      <p><%= element.description %></p>
-      <p>Over 21: <%= element.over_21 %></p>
-      <p>Event Starts: <%= element.start_datetime %></p>
-      <p>Event Ends: <%= element.end_datetime %></p>
+      <div class="col-xs-4">
+        <img src="<%= element.img_url %>" alt="">
+
+      </div>
+      <div class="col-xs-8">
+        <p><%= element.description %></p>
+        <p>Over 21: <%= element.over_21 %></p>
+        <p>Event Starts: <%= element.start_datetime %></p>
+        <p>Event Ends: <%= element.end_datetime %></p>
+
+      </div>
 
     </div>
   </div>
